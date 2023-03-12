@@ -1,8 +1,13 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
+import { AppRoutes } from "./routes";
 
 function App() {
-  return <div>Teste</div>;
+  return (
+   <BrowserRouter>
+       <AppRoutes />
+    </BrowserRouter>
+  )
 }
 
 export default App;
