@@ -1,0 +1,23 @@
+[
+  {
+    "name": "José Da silva",
+    "email": "jose.silva@gmail.com",
+    "tipo": "Administrador",
+    "ativo": "Sim",
+    "senha": "123"
+  },
+  {
+    "name": "Maria Joaquina",
+    "email": "maria.joaquina@gmail.com",
+    "tipo": "Usuario",
+    "ativo": "Sim",
+    "senha": "123"
+  },
+  {
+    "name": "Guilherme Pereira",
+    "email": "guilherme.pereira@gmail.com",
+    "tipo": "Administrador",
+    "ativo": "Sim",
+    "senha": ""
+  }
+]
