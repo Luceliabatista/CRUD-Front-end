@@ -1,6 +1,5 @@
 import { AddIcon, FindIcon } from "../../assets/styledIcons";
 import * as styled from "./styles";
-// import { AppMenuLateral } from "../../components";
 import dataJson from "./data.json";
 
 interface INewUserTemplateProps {
@@ -12,7 +11,6 @@ export const NewUserTemplate: React.FC<INewUserTemplateProps> = ({
   const handleAdicionarCadastro = () => {};
 
   return (
-    // <AppMenuLateral>
     <styled.Container>
       <styled.ContainerBusca>
         <div>
@@ -75,6 +73,5 @@ export const NewUserTemplate: React.FC<INewUserTemplateProps> = ({
         </tbody>
       </styled.ContainerUsers>
     </styled.Container>
-    // </AppMenuLateral>
   );
 };
