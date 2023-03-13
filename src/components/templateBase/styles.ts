@@ -32,8 +32,6 @@ export const ContainerSidebar = styled.nav`
     margin: 0;
   }
 
-  li {
-  }
 
   #cadastro {
     font-size: 20px;
@@ -48,7 +46,6 @@ export const ContainerSidebar = styled.nav`
     font-size: 18px;
     background: rgb(235 241 246);
     font-weight: 500;
-    /* width:100%; */
     display: block;
   }
 `;

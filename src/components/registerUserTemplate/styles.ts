@@ -90,12 +90,12 @@ export const ContainerUsers = styled.table`
     }
   }
 
-  tr.corTr {
+  tr.colorTr {
     background-color: #f2f2f2;
   }
 `;
 
-export const Acoes = styled.td`
+export const Actions = styled.td`
   width: 100px;
 
   div {

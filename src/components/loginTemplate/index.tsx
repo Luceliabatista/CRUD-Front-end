@@ -50,7 +50,7 @@ export const LoginTemplate: React.FC<ILoginTemplate> = ({ isCustomer }) => {
             </styled.Field>
             <styled.Field>
               <input
-                placeholder="Digite Sua Senha"
+                placeholder="Digite Sua password"
                 type="password"
                 id="inputPassword5"
                 className="form-control"

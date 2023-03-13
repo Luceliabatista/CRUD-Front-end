@@ -18,7 +18,7 @@ export const TemplateBase: React.FC<ITemplateBase> = ({ children }) => {
           <ul>
             <li id="cadastro">Cadastros</li>
             <li>
-              <a href="#"> Usuários</a>
+              <a href="/cadastro"> Usuários</a>
             </li>
             <li>
               <a href="#">Clientes</a>
