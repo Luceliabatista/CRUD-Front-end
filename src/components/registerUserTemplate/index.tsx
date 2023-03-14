@@ -1,8 +1,8 @@
 import { AddIcon, FindIcon } from "../../assets/styledIcons";
 import * as styled from "./styles";
 import dataJson from "./data.json";
-import { ModalCadastro } from "../modals/cadastroUsuario";
-import useModal from "../modals/useModal";
+import { ModalUsuario } from "../modal/modalUsuario";
+import useModal from "../modal/useModal";
 import { useState } from "react";
 
 export const NewUserTemplate: React.FC = () => {
@@ -26,7 +26,7 @@ export const NewUserTemplate: React.FC = () => {
 
   return (
     <>
-      <ModalCadastro
+      <ModalUsuario
         isOpen={isOpen}
         toggle={toggle}
         cancel={toggle}
@@ -58,7 +58,7 @@ export const NewUserTemplate: React.FC = () => {
               </button>
             </div>
           </div>
-          <button onClick={toggle}>
+          <button title="Adicionar usuário" onClick={toggle}>
             <AddIcon />
           </button>
         </styled.ContainerBusca>

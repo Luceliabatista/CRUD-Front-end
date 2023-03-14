@@ -11,7 +11,7 @@ const defaultData = {
   typeUser: "",
 };
 
-export const ModalCadastro: React.FC<IModalType> = (props) => {
+export const ModalUsuario: React.FC<IModalType> = (props) => {
   const [data, setData] = useState(defaultData);
 
   useEffect(() => {
@@ -22,12 +22,12 @@ export const ModalCadastro: React.FC<IModalType> = (props) => {
     setData(props.data || defaultData);
   }, [props.data]);
 
-  const acao = data.id ? "Editar" : "Cadastro de";
+  const acao = data.id ? "Edição" : "Cadastro";
 
   return (
     <Modal {...props}>
       <styled.Label>
-        {acao} Usuário
+        {acao} de Usuário
         <button title="Fechar" onClick={props.toggle}>
           <img src="/assets/fechar.png" alt="Fechar" />
         </button>
