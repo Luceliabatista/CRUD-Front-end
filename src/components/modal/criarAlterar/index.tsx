@@ -1,5 +1,5 @@
 import { IModalType, Modal } from "..";
-import * as styled from "../styles";
+import * as styled from "./styles";
 
 import React, { useState, useEffect } from "react";
 
