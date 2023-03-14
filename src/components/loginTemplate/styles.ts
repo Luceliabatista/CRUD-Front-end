@@ -9,7 +9,7 @@ export const Column = styled.div`
   min-height: 100vh;
 
   @media screen and (min-width: 1000px) {
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr 500px;
     gap: 0;
   }
 
@@ -20,7 +20,7 @@ export const Column = styled.div`
 `;
 
 export const ContainerImage = styled.div`
-    display: none;
+  display: none;
   position: relative;
   background-image: url("/assets/bg-login.jpeg");
   background-repeat: no-repeat;

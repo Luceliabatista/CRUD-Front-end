@@ -2,9 +2,13 @@ import styled from "styled-components";
 
 export const Label = styled.div`
   font-size: 24px;
-  padding: 5px 15px 70px 15px;
+  padding: 5px 15px 30px 15px;
   display: flex;
   justify-content: center;
+
+  @media screen and (min-width: 967px) {
+    padding: 5px 15px 70px 15px;
+  }
 `;
 
 export const Buttons = styled.div`

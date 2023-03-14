@@ -21,13 +21,18 @@ export const Label = styled.div`
 `;
 
 export const Inputs = styled.div`
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: flex-start;
   gap: 30px;
-  margin: 30px;
-  padding: 0 30px ;
+  width: 100%;
+  padding: 30px;
 
-  
+  div {
+    width: 100%;
+    max-width: 100%;
+  }
+
   input,
   select {
     width: 100%;
@@ -40,6 +45,13 @@ export const Inputs = styled.div`
 
   select {
     padding: 5px 40px 3px 5px;
+  }
+
+  @media screen and (min-width: 967px) {
+    margin: 30px 0;
+    padding: 0 60px;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `;
 export const Buttons = styled.div`

@@ -1,10 +1,10 @@
 import { AddIcon, FindIcon } from "../../assets/styledIcons";
 import * as styled from "./styles";
 import dataJson from "./data.json";
-import { ModalUsuario } from "../modal/usuarioCriarAlterar";
 import { ModalDelete } from "../modal/usuarioDeletar";
 import useModal from "../modal/hooks/useModal";
 import { useState } from "react";
+import { ModalUsuario } from "../modal/usuarioCriarAlterar";
 
 export const NewUserTemplate: React.FC = () => {
   const { isOpen, toggle } = useModal();
@@ -17,11 +17,9 @@ export const NewUserTemplate: React.FC = () => {
       const newList = list.map((item) =>
         item.id === values.id ? values : item
       );
-      // edição
       setList(newList);
     } else {
       values.id = Math.random();
-      // cadastro
       setList([...list, values]);
     }
     setData({});
@@ -91,47 +89,52 @@ export const NewUserTemplate: React.FC = () => {
         </styled.ContainerBusca>
         <h2>Usuários</h2>
         <styled.ContainerUsers>
-          <thead>
-            <tr>
-              <th id="name">Nome</th>
-              <th id="email">Email</th>
-              <th id="typeUserUsuario">Tipo Usuário</th>
-              <th>Ativo</th>
-              <th>AÇÕES</th>
-            </tr>
-          </thead>
-          <tbody>
-            {list.map((item, index) => (
-              <tr className={index % 2 === 0 ? "colorTr" : ""} key={index}>
-                <td>{item.name}</td>
-                <td>{item.email}</td>
-                <td>{item.typeUser}</td>
-                <td>{item.active}</td>
-                <styled.Actions>
-                  <div>
-                    <button
-                      title="Editar"
-                      onClick={() => {
-                        setData(item);
-                        toggle();
-                      }}
-                    >
-                      <img src="/assets/file-alt-light@2x.png" alt="Editar" />
-                    </button>
-                    <button
-                      title="Excluir"
-                      onClick={() => {
-                        setData(item);
-                        deleteProps.toggle();
-                      }}
-                    >
-                      <img src="/assets/trash-alt-light@2x.png" alt="Excluir" />
-                    </button>
-                  </div>
-                </styled.Actions>
+          <table>
+            <thead>
+              <tr>
+                <th id="name">Nome</th>
+                <th id="email">Email</th>
+                <th id="typeUserUsuario">Tipo Usuário</th>
+                <th>Ativo</th>
+                <th>AÇÕES</th>
               </tr>
-            ))}
-          </tbody>
+            </thead>
+            <tbody>
+              {list.map((item, index) => (
+                <tr className={index % 2 === 0 ? "colorTr" : ""} key={index}>
+                  <td>{item.name}</td>
+                  <td>{item.email}</td>
+                  <td>{item.typeUser}</td>
+                  <td>{item.active}</td>
+                  <styled.Actions>
+                    <div>
+                      <button
+                        title="Editar"
+                        onClick={() => {
+                          setData(item);
+                          toggle();
+                        }}
+                      >
+                        <img src="/assets/file-alt-light@2x.png" alt="Editar" />
+                      </button>
+                      <button
+                        title="Excluir"
+                        onClick={() => {
+                          setData(item);
+                          deleteProps.toggle();
+                        }}
+                      >
+                        <img
+                          src="/assets/trash-alt-light@2x.png"
+                          alt="Excluir"
+                        />
+                      </button>
+                    </div>
+                  </styled.Actions>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </styled.ContainerUsers>
       </styled.Container>
     </>

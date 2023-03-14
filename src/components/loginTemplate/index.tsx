@@ -24,7 +24,7 @@ export const formValidationSchema: yup.Schema<IFormData> = yup.object().shape({
   password: yup
     .string()
     .required("Campo obrigatório.")
-    .min(4, "Digite ao menos 3 caracteres"),
+    .min(3, "Digite ao menos 3 caracteres"),
 });
 
 export const LoginTemplate: React.FC<ILoginTemplate> = ({ isCustomer }) => {

@@ -19,7 +19,6 @@ export const TemplateBase: React.FC<ITemplateBase> = ({ children }) => {
       const newList = list.map((item) =>
         item.id === values.id ? values : item
       );
-      // edição
       setList(newList);
     } else {
       values.id = Math.random();
@@ -40,10 +39,15 @@ export const TemplateBase: React.FC<ITemplateBase> = ({ children }) => {
         cancel={handleCancelarCadastroType}
         confirm={handleSalvarCadastroType}
         data={data}
-      />{" "}
+      />
       <styled.Main className={collapse ? "collapse" : ""}>
         <styled.ContainerSidebar className={collapse ? "collapse" : ""}>
-          <div>
+          <div className="logo">
+            <div className="mobileCloseMenu">
+              <button onClick={() => setCollapse(!collapse)}>
+                <img src="/assets/fechar.png" alt="Fechar menu" />
+              </button>
+            </div>
             <img src="/assets/telemetrixLogo.png" alt="Logo da empresa" />
           </div>
           <ul>

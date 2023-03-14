@@ -11,7 +11,6 @@ export const Container = styled.section`
 
   button {
     padding: 0;
-    /* padding-top: 5px; */ /* confirmar com o alex o espaçamento abaixo do alinhamento */
     background: transparent;
     border: none;
     outline: none;
@@ -20,16 +19,22 @@ export const Container = styled.section`
     height: 30px;
     cursor: pointer;
   }
+
+  @media screen and (min-width: 1000px) {
+  }
+
+  @media screen and (min-width: 1400px) {
+  }
 `;
 
 export const ContainerBusca = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 90px;
+  grid-template-columns: 1fr;
   align-items: flex-end;
   gap: 25px;
-  padding: 30px 0 30px 40px;
+  padding: 20px 15px;
   width: 100%;
-  max-width: calc(105% - 104px);
+  max-width: 100%;
   border: 2px solid #d9d9d9;
   border-radius: 10px;
   background-color: #f8f8f8;
@@ -46,6 +51,7 @@ export const ContainerBusca = styled.div`
 
   select {
     padding-top: 3px;
+    margin-right: 10px;
   }
 
   .typeUser {
@@ -54,16 +60,29 @@ export const ContainerBusca = styled.div`
     justify-content: space-between;
   }
 
-  button {
-    margin: 0 0 0 20px;
+  @media screen and (min-width: 967px) {
+    grid-template-columns: 1fr 1fr 1fr 90px;
+    padding: 30px 0 30px 40px;
+
+    select {
+      margin-right: 20px;
+    }
+
+    button {
+      margin-left: 20px;
+    }
   }
 `;
 
-export const ContainerUsers = styled.table`
-  border-collapse: collapse;
-  width: 99%;
+export const ContainerUsers = styled.div`
+  width: 100%;
   max-width: 100%;
   overflow-x: auto;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
 
   th {
     padding: 10px 20px;
