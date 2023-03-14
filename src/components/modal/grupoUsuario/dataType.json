@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "typeUser": "Administrador",
+    "active": "Sim"
+  },
+  {
+    "id": 2,
+    "typeUser": "Usuario",
+    "active": "Sim"
+  }
+]

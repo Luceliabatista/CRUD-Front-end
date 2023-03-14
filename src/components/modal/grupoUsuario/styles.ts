@@ -20,6 +20,23 @@ export const Label = styled.div`
   }
 `;
 
+export const Status = styled.div`
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+
+  div {
+    height: 35px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    
+    input {
+      margin: 0;
+    }
+  }
+`;
+
 export const Inputs = styled.div`
   display: flex;
   justify-content: center;

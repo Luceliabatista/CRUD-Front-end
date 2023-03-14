@@ -1,4 +1,4 @@
-import { IModalType, Modal } from "..";
+import { IModalType, Modal } from "../hooks";
 import * as styled from "./styles";
 
 import React from "react";

@@ -1,4 +1,4 @@
-import * as styled from "./criarAlterar/styles";
+import * as styled from "./styles";
 
 import React, { ReactNode } from "react";
 

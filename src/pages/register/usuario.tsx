@@ -1,7 +1,7 @@
 import { TemplateBase } from "../../components";
 import { NewUserTemplate } from "../../components/registerUserTemplate";
 
-export const Register: React.FC = () => {
+export const CadastroUsuario: React.FC = () => {
   return (
     <TemplateBase>
       <NewUserTemplate />
