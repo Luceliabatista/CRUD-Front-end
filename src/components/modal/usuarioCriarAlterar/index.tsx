@@ -1,4 +1,4 @@
-import { IModalType, Modal } from "../hooks";
+import { IModalType, Modal } from "../modalType";
 import * as styled from "./styles";
 
 import React, { useState, useEffect } from "react";
@@ -67,7 +67,7 @@ export const ModalUsuario: React.FC<IModalType> = (props) => {
           />
         </div>
         <div>
-          <label>Tipo Usuário Usuário</label>
+          <label>Tipo Usuário</label>
           <div>
             <select
               name="typeUser"

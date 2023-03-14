@@ -1,8 +1,8 @@
 import { AddIcon, FindIcon } from "../../assets/styledIcons";
 import * as styled from "./styles";
 import dataJson from "./data.json";
-import { ModalUsuario } from "../modal/criarAlterar";
-import { ModalDelete } from "../modal/deletar";
+import { ModalUsuario } from "../modal/usuarioCriarAlterar";
+import { ModalDelete } from "../modal/usuarioDeletar";
 import useModal from "../modal/hooks/useModal";
 import { useState } from "react";
 
@@ -72,7 +72,7 @@ export const NewUserTemplate: React.FC = () => {
           </div>
           <div>
             <label>Tipo Usuário</label>
-            <div className="buttons">
+            <div className="typeUser">
               <select name="" id="typeUserUsuario">
                 <option value="" disabled selected>
                   Selecione

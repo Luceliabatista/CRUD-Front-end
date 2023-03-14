@@ -1,17 +1,15 @@
 import styled from "styled-components";
 
 export const Label = styled.div`
-  font-size: 25px;
-  padding: 5px 15px 15px;
-  border-bottom: 2px solid rgb(226 230 233);
+  font-size: 24px;
+  padding: 5px 15px 70px 15px;
   display: flex;
   justify-content: center;
 `;
 
 export const Buttons = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  padding: 120px 10px;
+  justify-content: space-around;
 
   button {
     border: 1px solid #005187;

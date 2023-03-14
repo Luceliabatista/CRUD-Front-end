@@ -30,7 +30,7 @@ export const Status = styled.div`
     display: flex;
     gap: 5px;
     align-items: center;
-    
+
     input {
       margin: 0;
     }
@@ -51,7 +51,6 @@ export const Inputs = styled.div`
     border: 1px solid #d9d9d9;
     padding: 5px;
     margin-top: 6px;
-    cursor: pointer;
   }
 
   select {

@@ -32,7 +32,6 @@ export const ContainerSidebar = styled.nav`
     margin: 0;
   }
 
-
   #cadastro {
     font-size: 20px;
     background: #005187;
@@ -45,7 +44,7 @@ export const ContainerSidebar = styled.nav`
     padding: 5px 0 15px 15px;
     font-size: 18px;
     background: rgb(235 241 246);
-    font-weight: 500;
+    font-weight: 400;
     display: block;
   }
 `;
@@ -71,7 +70,7 @@ export const ContainerPagina = styled.div`
     }
 
     img {
-      max-width: 20px;
+      max-width: 25px;
     }
   }
 `;

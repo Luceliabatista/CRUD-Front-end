@@ -24,12 +24,12 @@ export const Container = styled.section`
 
 export const ContainerBusca = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 150px;
+  grid-template-columns: 1fr 1fr 1fr 90px;
   align-items: flex-end;
-  gap: 50px;
-  padding: 50px;
+  gap: 25px;
+  padding: 30px 0 30px 40px;
   width: 100%;
-  max-width: calc(100% - 104px);
+  max-width: calc(105% - 104px);
   border: 2px solid #d9d9d9;
   border-radius: 10px;
   background-color: #f8f8f8;
@@ -44,17 +44,24 @@ export const ContainerBusca = styled.div`
     margin-top: 5px;
   }
 
-  .buttons {
+  select {
+    padding-top: 3px;
+  }
+
+  .typeUser {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    gap: 15px;
+  }
+
+  button {
+    margin: 0 0 0 20px;
   }
 `;
 
 export const ContainerUsers = styled.table`
   border-collapse: collapse;
-  width: 100%;
+  width: 99%;
   max-width: 100%;
   overflow-x: auto;
 

@@ -16,8 +16,10 @@ export const ModalOverlay = styled.div`
 export const ModalBox = styled.div`
   display: block;
   background: white;
-  width: 80%;
-  height: 35%;
+  max-width: 85%;
+  min-width:50%;
+  max-height: 35%;
+  min-height: 10%;
   padding: 10px 0;
   border-radius: 10px;
 `;

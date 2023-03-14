@@ -1,6 +1,6 @@
 import { useState } from "react";
 import * as styled from "./styles";
-import dataTypeJson from "./../modal/grupoUsuario/dataType.json";
+import dataJson from "./../registerUserTemplate/data.json";
 import useModal from "../modal/hooks/useModal";
 import { GrupoUsuario } from "../modal/grupoUsuario";
 
@@ -12,7 +12,7 @@ export const TemplateBase: React.FC<ITemplateBase> = ({ children }) => {
   const [collapse, setCollapse] = useState(false);
   const { isOpen, toggle } = useModal();
   const [data, setData] = useState({});
-  const [list, setList] = useState(dataTypeJson);
+  const [list, setList] = useState(dataJson);
 
   const handleSalvarCadastroType = (values: any) => {
     if (values.id) {

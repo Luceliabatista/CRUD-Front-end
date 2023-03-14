@@ -1,28 +1,59 @@
 import * as styled from "./styles";
+import { useNavigate } from "react-router-dom";
+import { Form } from "@unform/web";
+import { SubmitHandler, FormHandles } from "@unform/core";
+import { Input } from "../input";
+import * as yup from "yup";
+import { useRef } from "react";
 
 export interface ILoginTemplate {
   isCustomer?: boolean;
 }
 
+interface IFormErrors {
+  [key: string]: string;
+}
+
+interface IFormData {
+  email: string;
+  password: string;
+}
+
+export const formValidationSchema: yup.Schema<IFormData> = yup.object().shape({
+  email: yup.string().required("Campo obrigatório.").email("E-mail inválido."),
+  password: yup
+    .string()
+    .required("Campo obrigatório.")
+    .min(4, "Digite ao menos 3 caracteres"),
+});
+
 export const LoginTemplate: React.FC<ILoginTemplate> = ({ isCustomer }) => {
+  const formRef = useRef<FormHandles>(null);
+  const navigate = useNavigate();
+
+  const handleSubmit: SubmitHandler<IFormData> = (data) => {
+    formValidationSchema
+      .validate(data, { abortEarly: false })
+      .then((dadosValidados) => {
+        navigate("/cadastro/usuario");
+      })
+      .catch((errors: yup.ValidationError) => {
+        const validationErrors: IFormErrors = {};
+
+        errors.inner.forEach((error) => {
+          if (!error.path) return;
+
+          validationErrors[error.path] = error.message;
+        });
+
+        formRef.current?.setErrors(validationErrors);
+      });
+  };
+
   return (
     <div>
       <styled.Column>
-        <styled.ContainerImage>
-          <img src="/assets/bg-login.jpeg" alt="Banner" />
-          <div>
-            <svg
-              viewBox="0 0 500 450"
-              preserveAspectRatio="none"
-              style={{ height: "100vh", width: "100%" }}
-            >
-              <path
-                d="M0.00,92.27 C116.83,192.92 204.30,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z"
-                style={{ stroke: "none", fill: "#ffffff" }}
-              />
-            </svg>
-          </div>
-        </styled.ContainerImage>
+        <styled.ContainerImage />
         <styled.ContainerForm>
           <styled.ContainerLogo>
             <img
@@ -38,29 +69,21 @@ export const LoginTemplate: React.FC<ILoginTemplate> = ({ isCustomer }) => {
               />
             </styled.ContainerLogo>
           )}
-          <form>
+          <Form ref={formRef} onSubmit={handleSubmit}>
             <styled.Field>
-              <input
-                placeholder="Email"
-                type="email"
-                className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-              />
+              <Input placeholder="Email" type="text" name="email" />
             </styled.Field>
             <styled.Field>
-              <input
-                placeholder="Digite Sua password"
+              <Input
+                placeholder="Digite Sua Senha"
                 type="password"
-                id="inputPassword5"
-                className="form-control"
-                aria-describedby="passwordHelpBlock"
+                name="password"
               />
             </styled.Field>
             <styled.Field>
-              <button>Entrar</button>
+              <button type="submit">Entrar</button>
             </styled.Field>
-          </form>
+          </Form>
         </styled.ContainerForm>
       </styled.Column>
     </div>

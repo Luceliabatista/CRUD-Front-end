@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { LoginAdmin } from "../pages/login/LoginAdmin";
 import { LoginCustomer } from "../pages/login/LoginCustomer";
 import { CadastroUsuario } from "../pages/register/usuario";
@@ -13,6 +13,8 @@ export const AppRoutes = () => {
       <Route path="/cadastro/usuario" element={<CadastroUsuario />} />
       <Route path="/cadastro/fornecedor" element={<CadastroFornecedor />} />
       <Route path="/cadastro/cliente" element={<CadastroCliente />} />
+
+      <Route path="*" element={<Navigate to="/login/admin" />} />
     </Routes>
   );
 };

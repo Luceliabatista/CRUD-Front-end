@@ -25,7 +25,9 @@ export const Inputs = styled.div`
   justify-content: center;
   gap: 30px;
   margin: 30px;
+  padding: 0 30px ;
 
+  
   input,
   select {
     width: 100%;
@@ -34,7 +36,6 @@ export const Inputs = styled.div`
     border: 1px solid #d9d9d9;
     padding: 5px;
     margin-top: 6px;
-    cursor: pointer;
   }
 
   select {

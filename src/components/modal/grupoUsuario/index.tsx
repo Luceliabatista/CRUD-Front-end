@@ -1,4 +1,4 @@
-import { IModalType, Modal } from "../hooks";
+import { IModalType, Modal } from "../modalType";
 import * as styled from "./styles";
 
 import React, { useState, useEffect } from "react";
@@ -42,7 +42,13 @@ export const GrupoUsuario: React.FC<IModalType> = (props) => {
         </div>
         <styled.Status>
           <div>
-            <input type="radio" id="ativo" name="status" value="Ativo" checked/>
+            <input
+              type="radio"
+              id="ativo"
+              name="status"
+              value="Ativo"
+              checked
+            />
             <span>Ativo</span>
           </div>
           <div>
