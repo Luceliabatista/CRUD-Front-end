@@ -1,12 +1,14 @@
 import { AddIcon, FindIcon } from "../../assets/styledIcons";
 import * as styled from "./styles";
 import dataJson from "./data.json";
-import { ModalUsuario } from "../modal/modalUsuario";
+import { ModalUsuario } from "../modal/criarAlterar";
+import { ModalDelete } from "../modal/deletar";
 import useModal from "../modal/useModal";
 import { useState } from "react";
 
 export const NewUserTemplate: React.FC = () => {
   const { isOpen, toggle } = useModal();
+  const deleteProps = useModal();
   const [data, setData] = useState({});
   const [list, setList] = useState(dataJson);
 
@@ -22,6 +24,23 @@ export const NewUserTemplate: React.FC = () => {
       // cadastro
       setList([...list, values]);
     }
+    setData({});
+  };
+
+  const handleCancelarCadastro = () => {
+    toggle();
+    setData({});
+  };
+
+  const handleDeletarCadastro = (id: number) => {
+    const newList = list.filter((item) => item.id !== id);
+    setList(newList);
+    setData({});
+  };
+
+  const handleCancelarDeletarCadastro = () => {
+    deleteProps.toggle();
+    setData({});
   };
 
   return (
@@ -29,8 +48,16 @@ export const NewUserTemplate: React.FC = () => {
       <ModalUsuario
         isOpen={isOpen}
         toggle={toggle}
-        cancel={toggle}
+        cancel={handleCancelarCadastro}
         confirm={handleSalvarCadastro}
+        data={data}
+      />
+
+      <ModalDelete
+        isOpen={deleteProps.isOpen}
+        toggle={deleteProps.toggle}
+        cancel={handleCancelarDeletarCadastro}
+        confirm={handleDeletarCadastro}
         data={data}
       />
       <styled.Container>
@@ -91,7 +118,13 @@ export const NewUserTemplate: React.FC = () => {
                     >
                       <img src="/assets/file-alt-light@2x.png" alt="Editar" />
                     </button>
-                    <button title="Excluir">
+                    <button
+                      title="Excluir"
+                      onClick={() => {
+                        setData(item);
+                        deleteProps.toggle();
+                      }}
+                    >
                       <img src="/assets/trash-alt-light@2x.png" alt="Excluir" />
                     </button>
                   </div>
