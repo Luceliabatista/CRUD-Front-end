@@ -26,6 +26,7 @@
 
 <ul>
 <h2>Projeto desenvolvido para realizar o CRUD de Usuários apenas com funcionalidades front-end.</h2>
+ <li>Página de login para admin e cliente.</li>
  <li>CRUD de usuários, os associando a um dos grupos existentes.</li>
  <li>Criação de cadastro de Grupo de Usuários.</li>
 </ul>
@@ -55,7 +56,7 @@ yarn start
 
 ou
 
-npm start
+npm run start
 
 ```
 
