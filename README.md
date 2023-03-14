@@ -1,4 +1,4 @@
-<h1 align="center">Plataforma de CRUDs para gerenciamente de contas de Usuários</h1>
+<h1 align="center">Plataforma de CRUD para gerenciamente de contas de Usuários</h1>
 
 <h4 align="center"> 
 	🚧  Status da aplicação: Finalizada 🚧
