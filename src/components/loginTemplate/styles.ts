@@ -68,7 +68,7 @@ export const ContainerForm = styled.div`
     border-bottom: 2px solid #005187;
     padding: 5px 10px;
     outline: none;
-    width: calc(100% - 20px);
+    width: 100%;
     max-width: 100%;
   }
 
