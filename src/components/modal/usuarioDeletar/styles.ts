@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Label = styled.div`
-  font-size: 24px;
+  font-size: 23px;
   padding: 5px 15px 30px 15px;
   display: flex;
   justify-content: center;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Label = styled.div`
-  font-size: 25px;
+  font-size: 23px;
   padding: 5px 15px 15px;
   border-bottom: 2px solid rgb(226 230 233);
   display: flex;
@@ -68,5 +68,9 @@ export const Buttons = styled.div`
     color: #005187;
     font-weight: 500;
     font-size: 15px;
+  }
+
+  @media screen and (max-width: 770px) {
+    gap: 50px;
   }
 `;
